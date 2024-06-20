@@ -2,7 +2,7 @@
 
 :root {
     --primary: #000000;
-    --text-p: #f2f2f2;
+    --text-p:rgb(202, 196, 196);
     --global-color-2: #fd5526;
     --hover: #141414;
     --hover-2: #fd5526;
@@ -87,6 +87,7 @@
   
   body .p1 {
     font-size: 1.25rem;
+    color:rgb(202, 196, 196);
   }
   
   body .p2 {
@@ -216,6 +217,7 @@ button:hover{
 
 .navbar{
     background-color: var(--primary);
+    border-bottom:1px solid grey;
 }
 .no-underline{
     color:var(--text-p1);
@@ -228,6 +230,7 @@ button:hover{
 .nav{
     margin: 20px;
     background-color: var(--hover);
+  
 }
 .nav-logo{
     display: grid;
@@ -421,7 +424,7 @@ text-align: left;
   font-family: var(--accent-font-family);
 }
 .serv-info p1{
-  color: var(--text-p1);
+  color:rgb(202, 196, 196);
   font-family: var(--accent-font-family);
 }
 .serv-info img{
