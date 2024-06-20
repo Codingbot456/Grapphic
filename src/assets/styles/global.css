@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --primary: #000000;
+    --text-p: #f2f2f2;
+    --global-color-2: #fd5526;
+    --hover: #141414;
+    --hover-2: #fd5526;
+    --text-p1: #ffffff;
+    --e-global-color-text: #7A7A7A;
+    --primary-font-family: 'Roboto', sans-serif;
+    --primary-font-weight: 600;
+    --secondary-font-family: 'Roboto Slab', serif;
+    --secondary-font-weight: 400;
+    --text-font-family: 'Roboto', sans-serif;
+    --text-font-weight: 400;
+    --accent-font-family: 'Roboto', sans-serif;
+    --accent-font-weight: 500;
+  }
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+   
+  }
+  
+  body {
+    font-family: var(--text-font-family);
+    font-weight: var(--text-font-weight);
+    color: var(--text-p);
+    line-height: 1.5;
+    background-color: black;
+  }
+  
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5 {
+    font-weight: var(--primary-font-weight);
+    color:var(--text-p);
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    
+  }
+  
+  body h1 {
+    font-size: 6rem;
+    font-family: var(--primary-font-family);
+   
+  }
+  
+  body h2 {
+    font-size: 4rem;
+    font-family: var(--secondary-font-family);
+    
+  
+  }
+  
+  body h3 {
+    font-size: 3rem;
+    font-family: var(--accent-font-family);
+   
+  }
+  
+  body h4 {
+    font-size: 1.8rem;
+    font-family: var(--primary-font-family);
+  }
+  
+  body h5 {
+    font-size: 1.25rem;
+    font-family: var(--secondary-font-family);
+  }
+  
+  body p,
+  body .p1,
+  body .p2,
+  body .p3,
+  body .p4 {
+    font-family: var(--text-font-family);
+    font-weight: var(--text-font-weight);
+    line-height: 1.5;
+    margin-bottom: 1em;
+  }
+  
+  body .p1 {
+    font-size: 1.25rem;
+  }
+  
+  body .p2 {
+    font-size: 1.1rem;
+  }
+  
+  body .p3 {
+    font-size: 1rem;
+  }
+  
+  body .p4 {
+    font-size: 0.875rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    body h1 {
+      font-size: 2rem;
+    }
+    body h2 {
+      font-size: 1.75rem;
+    }
+    body h3 {
+      font-size: 1.5rem;
+    }
+    body h4 {
+      font-size: 1.25rem;
+    }
+    body h5 {
+      font-size: 1.1rem;
+    }
+  
+    body .p1 {
+      font-size: 1.1rem;
+    }
+    body .p2 {
+      font-size: 1rem;
+    }
+    body .p3 {
+      font-size: 0.95rem;
+    }
+    body .p4 {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    body h1 {
+      font-size: 1.75rem;
+    }
+    body h2 {
+      font-size: 1.5rem;
+    }
+    body h3 {
+      font-size: 1.25rem;
+    }
+    body h4 {
+      font-size: 1.1rem;
+    }
+    body h5 {
+      font-size: 1rem;
+    }
+  
+    body .p1 {
+      font-size: 1rem;
+    }
+    body .p2 {
+      font-size: 0.95rem;
+    }
+    body .p3 {
+      font-size: 0.9rem;
+    }
+    body .p4 {
+      font-size: 0.8rem;
+    }
+  }
+
+body button {
+    background-color: var(--global-color-2);
+    color:var(--primary);
+    font-family: var(--accent-font-family);
+    font-weight: var(--primary-font-weight);
+    font-size: 1.4em;
+    white-space: nowrap;
+    letter-spacing: 3px;
+    max-height: 50px;
+    height: 100%;
+    width: 100%;
+    max-width: 200px;
+    padding: 12px 20px;
+    display: grid;
+    place-content: center;
+    outline: none;
+    border: 2px solid #fd5526;
+    transition: .5s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transform-origin:left;
+  
+   
+}
+button::before{
+    content: "";
+    background-color:var(--text-p1);
+    color: var(--global-color-2);
+    height:80px;
+    color:var(--text-p);
+    display:block;
+    position: absolute;
+    width:0px;
+    height: 100%;
+    z-index: -1;
+    transition: .7s ease;
+   border-radius: 0  20px 20px 0;
+    
+}
+ button:hover::before{
+    color: var(--primary);
+    letter-spacing: .3px;
+    width: 230px;
+    
+}
+button:hover{
+    scale: 1.008;
+}
+
+
+.navbar{
+    background-color: var(--primary);
+}
+.no-underline{
+    color:var(--text-p1);
+    font-family: var(--secondary-font-family);
+    font-weight: var(--primary-font-weight);
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.nav{
+    margin: 20px;
+    background-color: var(--hover);
+}
+.nav-logo{
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color:white;
+}
+.nav-list  ul li{
+    transition: .5s ease;
+}
+.nav-list  ul li::after{
+    content: "";
+    display: grid;
+    place-content: center;
+    align-items: center;
+    scale: 0;
+    height: 3px;
+    background-color:var(--hover-2);
+    display: block;
+    transition: .5s ease;
+}
+.nav-list  ul li:hover{
+    color: var(--hover-2);
+    letter-spacing: 1.5px;
+}
+
+.nav-list  ul li:hover::after{
+    scale: 1;
+    transform-origin: left;
+}
+
+.home {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height:auto;
+    background-color: var(--primary);
+}
+.home-info{
+    padding: 50px; 
+    margin-bottom: 40px  
+}
+.home button {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    body h1{
+        font-size:2.5em;
+    }
+    .nav-list{
+        display: none;
+    }
+    
+}
+
+.about{
+    background-color: var(--primary);
+    min-width: 100%;
+   
+}
+
+.about-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+    width: 100%;
+}
+.about-info h2{
+  text-align:center;
+
+}
+.about-info .my-dt{
+    width:100%;
+    max-width: 80%;
+}
+.about-info .my-dt{
+  color:rgb(202, 196, 196);
+  font-weight:100px;
+}
+
+
+/*about*/
+.awards{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--text-p);
+    margin-top: 50px;
+    
+}
+.awards h3{
+    text-align: center;
+    color:var(--hover);
+    margin-top:20px;
+
+}
+
+.awards .info{
+    display: flex;
+    flex-wrap: wrap;
+   align-items: center;
+}
+.awards-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid black;
+    margin-top: 50px;
+    padding: 10px;
+    width: 100%;
+    flex: 1;
+    gap: 150px;
+}
+
+.awards-detail h5 {
+  color: var(--primary);
+  
+   
+}
+
+@media screen and (max-width: 768px) {
+    .awards-detail{
+        display: grid;
+        grid-auto-flow: row;
+        place-content: left;
+        text-align: left;
+        width: 100%;
+        gap: 10px;
+
+    } 
+}
+
+.work{
+    display: grid;
+    margin-top:100px;
+    width: 100%;
+    
+}
+.work h1{
+   
+   
+}
+.brands{
+    display: grid;
+   grid-template-columns: repeat(4,1fr);
+   margin: 20px;
+ 
+
+}
+.brands div{
+    width: 250px;
+    height: 250px;
+    display: grid;
+    place-content: center;
+  border: 2px solid white;
+
+}
+
+/*services*/
+.services{
+    display: grid;
+    margin-top: 100px;
+}
+.services h3{
+    text-align:center;
+}
+
+.my-serv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.serv-info{
+    display: grid;
+    gap:10px;
+width: 100%;
+overflow: hidden;
+max-width: 380px;
+text-align: left;
+}
+
+.serv-info p{
+  color: var(--text-p1);
+  font-family: var(--accent-font-family);
+}
+.serv-info p1{
+  color: var(--text-p1);
+  font-family: var(--accent-font-family);
+}
+.serv-info img{
+  width: 100%;
+}
+
+.serv-detail{
+    display: grid;
+    gap: 3px;
+}
+
+/*port*/
+.port{
+    width: 100%;
+    background-color: var(--primary);
+    gap: 60px;
+    text-align: center;
+}
+.port-actions{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+
+}
+
+.main-gal{
+   
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 5px;
+    padding: 0;
+    margin-top: 30px;
+}
+.gallery img{ 
+   transition: .5s ease;
+   cursor:pointer;
+   
+  
+  
+}
+.gallery img:hover{
+    scale: 1.07;
+    z-index: 1000;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .gallery {
+        display: grid;
+       grid-template-columns: repeat(2,1fr);
+       margin: 10px;
+       gap:3px;
+    }
+    .gallery img{
+     width:100%;
+     max-width:200px;
+    }
+    .port-actions{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 10px;
+        gap:3px;
+        max-width: 100%;
+    }
+    
+}
