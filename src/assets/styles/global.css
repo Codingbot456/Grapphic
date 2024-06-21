@@ -87,7 +87,7 @@
   
   body .p1 {
     font-size: 1.25rem;
-    color:rgb(202, 196, 196);
+    
   }
   
   body .p2 {
@@ -236,12 +236,74 @@ button:hover{
     display: grid;
     place-content: center;
     text-align: center;
-    color:white;
+    
 }
-.nav-list  ul li{
+
+
+
+/* Nav.css */
+/* Nav.css */
+
+.light-theme {
+  background-color: white;
+  color: black;
+}
+
+.dark-theme {
+  background-color: black;
+  color: white;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.icon{
+ width: 20px;
+ height:20px;
+  display: grid;
+  place-content: center;
+  font-weight: bolder;
+  transition: .3s ease;
+  margin: 3px;
+  transition: .3s ease
+}
+
+
+.icon:hover{
+  color: var(--global-color-2);
+  scale: 1.1;
+}
+
+.nav-list,.sidebar{
+
+}  ul li{
     transition: .5s ease;
 }
-.nav-list  ul li::after{
+.nav-list,.sidebar{
+
+}  ul li::after{
     content: "";
     display: grid;
     place-content: center;
@@ -252,7 +314,9 @@ button:hover{
     display: block;
     transition: .5s ease;
 }
-.nav-list  ul li:hover{
+.nav-list,.sidebar{
+
+}  ul li:hover{
     color: var(--hover-2);
     letter-spacing: 1.5px;
 }
@@ -261,13 +325,39 @@ button:hover{
     scale: 1;
     transform-origin: left;
 }
+.sidebar  ul li:hover::after{
+  scale: .3;
+  transform-origin: left;
+  font-weight: bolder;
+}
+.sidebar{
+  position: absolute;
+  z-index: 10000;
+  width: 100%;
+  transform-origin:left;
+  animation: identifier .5s linear;
+  border-bottom: 1px solid gray;
+}
+@keyframes identifier {
+  0%{
+    transform: translateX(-100%);
+    border-radius: 100%;
+    scale: 0;
+  }
+  100%{
+    transform: translateX(0);
+    transform: 0;
+    scale: 1;
 
+  }
+}
 .home {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     height:auto;
     background-color: var(--primary);
+    height: 100vh;
 }
 .home-info{
     padding: 50px; 
@@ -442,6 +532,7 @@ text-align: left;
     background-color: var(--primary);
     gap: 60px;
     text-align: center;
+    height: 100vh;
 }
 .port-actions{
     width: 100%;
@@ -466,6 +557,7 @@ text-align: left;
     gap: 5px;
     padding: 0;
     margin-top: 30px;
+    background-color: black;
 }
 .gallery img{ 
    transition: .5s ease;

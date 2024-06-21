@@ -4,7 +4,7 @@ import { Gallery } from '../components/gallery/Gallery';
 export const Portfolio = () => {
     return (
         <div className='port'>
-            <h1>Portfolio</h1>
+            <h2>Portfolio</h2>
             <Gallery />
         </div>
     );
