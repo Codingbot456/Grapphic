@@ -1,5 +1,4 @@
 import React from 'react'
-import Nav from '../components/layout/Nav'
 import serv1 from './../assets/images/service-1.png';
 import serv2 from './../assets/images/service-2.png';
 import serv3 from './../assets/images/service-3.png';
