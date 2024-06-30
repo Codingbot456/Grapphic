@@ -90,7 +90,7 @@ function Nav() {
             <Link to="/portfolio" className="no-underline">Portfolio</Link>
           </li>
           <li className='p-3'>
-            <Link to="/contact" className="no-underline">Contact</Link>
+            <Link to="/contacts" className="no-underline">Contact</Link>
           </li>
         </ul>
       </div>
