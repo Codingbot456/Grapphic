@@ -4,6 +4,7 @@ import Nav from '../layout/Nav'; // Check the correct path
 import Home from '../../pages/Home';
 import About from '../../pages/About';
 import { Portfolio } from '../../pages/Portfolio';
+import Contacts from '../../pages/Contacts';
 
 function AppRouter() {
   return (
@@ -14,6 +15,7 @@ function AppRouter() {
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/contacts' element={<Contacts />} />
         </Routes>
       </div>
     </Router>

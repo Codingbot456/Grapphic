@@ -32,7 +32,7 @@ function Nav() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const getThemeClass = () => (darkTheme ? 'dark-theme' : 'light-theme');
+  const getThemeClass = () => (darkTheme ? 'light-theme' : 'dark-theme');
   const getIconClass = () => (darkTheme ? 'icon-dark' : 'icon-light');
 
   const MainNav = () => (
@@ -64,7 +64,7 @@ function Nav() {
                 <Link to="/portfolio" className="no-underline">Portfolio</Link>
               </li>
               <li className='p-3'>
-                <Link to="/contact" className="no-underline">Contact</Link>
+                <Link to="/contacts" className="no-underline">Contact</Link>
               </li>
             </ul>
             <div className={`p-3 ${getIconClass()}`} onClick={toggleTheme}>
